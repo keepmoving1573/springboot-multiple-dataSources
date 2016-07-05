@@ -10,7 +10,7 @@ import java.net.UnknownHostException;
 
 @Configuration
 @EnableAutoConfiguration
-@ComponentScan("com.ptmind")
+@ComponentScan("com.ptmind.ptengine")
 public class Application extends AbstractApplication {
 
     public static void main(String[] args) throws UnknownHostException {

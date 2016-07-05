@@ -1,5 +1,6 @@
 package com.ptmind.ptengine.service;
 
+import com.ptmind.ptengine.model.UserDetail;
 import com.ptmind.ptengine.model.UserInfo;
 
 /**
@@ -8,4 +9,6 @@ import com.ptmind.ptengine.model.UserInfo;
  */
 public interface DataTransferService {
     UserInfo selectUser(int id);
+
+    UserDetail selectUserDetail(int id);
 }
