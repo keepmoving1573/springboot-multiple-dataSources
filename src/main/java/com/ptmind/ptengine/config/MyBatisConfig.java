@@ -5,8 +5,8 @@ import com.ptmind.ptengine.util.DatabaseType;
 import com.ptmind.ptengine.util.DynamicDataSource;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.EnvironmentAware;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -26,10 +26,18 @@ import java.util.Properties;
  */
 @Configuration // 该注解类似于spring配置文件
 //@MapperScan(basePackages = "com.ptmind.ptengine.mapper")
-public class MyBatisConfig {
+//@PropertySource("classpath:application.properties")
+public class MyBatisConfig implements EnvironmentAware {
 
-    @Autowired
-    private Environment env;
+    /*@Autowired
+    private Environment env;*/
+
+    private Environment environment;
+
+    @Override
+    public void setEnvironment(final Environment environment) {
+        this.environment = environment;
+    }
 
     /**
      * 创建数据源(数据源的名称：方法名可以取为XXXDataSource(),XXX为数据库名称,该名称也就是数据源的名称)
@@ -37,20 +45,20 @@ public class MyBatisConfig {
     @Bean
     public DataSource ptengineDataSource() throws Exception {
         Properties props = new Properties();
-        props.put("driverClassName", "com.mysql.jdbc.Driver");
-        props.put("url", "jdbc:mysql://localhost:3306/huan_blog?zeroDateTimeBehavior=convertToNull&amp;useUnicode=true&amp;characterEncoding=utf-8");
-        props.put("username", "root");
-        props.put("password", "root");
+        props.put("driverClassName", environment.getProperty("ptengine-datasource.driverClassName"));
+        props.put("url", environment.getProperty("ptengine-datasource.url"));
+        props.put("username", environment.getProperty("ptengine-datasource.username"));
+        props.put("password", environment.getProperty("ptengine-datasource.password"));
         return DruidDataSourceFactory.createDataSource(props);
     }
 
     @Bean
     public DataSource ptmindCommonDataSource() throws Exception {
         Properties props = new Properties();
-        props.put("driverClassName", "com.mysql.jdbc.Driver");
-        props.put("url", "jdbc:mysql://localhost:3306/huan_blog_test?zeroDateTimeBehavior=convertToNull&amp;useUnicode=true&amp;characterEncoding=utf-8");
-        props.put("username", "root");
-        props.put("password", "root");
+        props.put("driverClassName", environment.getProperty("ptmindCommon-datasource.driverClassName"));
+        props.put("url", environment.getProperty("ptmindCommon-datasource.url"));
+        props.put("username", environment.getProperty("ptmindCommon-datasource.username"));
+        props.put("password", environment.getProperty("ptmindCommon-datasource.password"));
         return DruidDataSourceFactory.createDataSource(props);
     }
 
@@ -110,5 +118,6 @@ public class MyBatisConfig {
     public DataSourceTransactionManager transactionManager(DynamicDataSource dataSource) throws Exception {
         return new DataSourceTransactionManager(dataSource);
     }
+
 
 }

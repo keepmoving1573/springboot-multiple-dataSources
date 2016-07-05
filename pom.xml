@@ -24,6 +24,7 @@
         <junit.version>4.12</junit.version>
         <mapper.version>3.3.8</mapper.version>
         <pagehelper.version>4.1.6</pagehelper.version>
+        <logback.version>1.1.7</logback.version>
     </properties>
 
     <parent>
@@ -40,9 +41,20 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-            <version>1.2.17</version>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.21</version>
+        </dependency>
+        <!-- LogBack dependencies -->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${logback.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-core</artifactId>
+            <version>${logback.version}</version>
         </dependency>
         <dependency>
             <groupId>javax.servlet</groupId>

@@ -1,0 +1,36 @@
+server:
+    port: 8080
+
+---
+spring:
+    profiles: dev
+ptengine-datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/huan_blog?characterEncoding=utf8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: root
+    maximumPoolSize: 10
+ptmindCommon-datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/huan_blog_test?characterEncoding=utf8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: root
+    maximumPoolSize: 10
+---
+spring:
+    profiles: test
+datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/huan_blog_test?characterEncoding=utf8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: root
+    maximumPoolSize: 10
+---
+spring:
+    profiles: prod
+datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/huan_blog_prod?characterEncoding=utf8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: root
+    maximumPoolSize: 10
