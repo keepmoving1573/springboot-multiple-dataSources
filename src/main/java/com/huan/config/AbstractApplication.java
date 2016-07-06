@@ -1,6 +1,6 @@
-package com.ptmind.ptengine.config;
+package com.huan.config;
 
-import com.ptmind.ptengine.util.Constants;
+import com.huan.util.Constants;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package com.ptmind.ptengine.model;
+package com.huan.model;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;

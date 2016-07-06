@@ -1,4 +1,4 @@
-package com.ptmind.ptengine.model;
+package com.huan.model;
 
 public class UserInfo {
     /**

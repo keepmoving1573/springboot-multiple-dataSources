@@ -1,6 +1,6 @@
-package com.ptmind.ptengine.mapper;
+package com.huan.mapper;
 
-import com.ptmind.ptengine.model.UserDetail;
+import com.huan.model.UserDetail;
 import tk.mybatis.mapper.common.Mapper;
 
 public interface UserDetailMapper extends Mapper<UserDetail> {

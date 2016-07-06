@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.ptmind</groupId>
-    <artifactId>ptengine-data-transfer</artifactId>
+    <artifactId>springboot-multiple-dataSources</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
@@ -14,8 +14,8 @@
         <!--  MyBatis Generator  -->
         <!--  Java接口和实体类  -->
         <targetJavaProject>${basedir}/src/main/java</targetJavaProject>
-        <targetMapperPackage>com.ptmind.ptengine.mapper</targetMapperPackage>
-        <targetModelPackage>com.ptmind.ptengine.model</targetModelPackage>
+        <targetMapperPackage>com.huan.mapper</targetMapperPackage>
+        <targetModelPackage>com.huan.model</targetModelPackage>
         <!--  XML生成路径  -->
         <targetResourcesProject>${basedir}/src/main/resources</targetResourcesProject>
         <targetXMLPackage>mapper</targetXMLPackage>

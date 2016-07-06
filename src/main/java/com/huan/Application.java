@@ -1,6 +1,6 @@
-package com.ptmind.ptengine;
+package com.huan;
 
-import com.ptmind.ptengine.config.AbstractApplication;
+import com.huan.config.AbstractApplication;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
@@ -10,7 +10,7 @@ import java.net.UnknownHostException;
 
 @Configuration
 @EnableAutoConfiguration
-@ComponentScan("com.ptmind.ptengine")
+@ComponentScan("com.huan")
 public class Application extends AbstractApplication {
 
     public static void main(String[] args) throws UnknownHostException {

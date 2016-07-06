@@ -1,4 +1,4 @@
-package com.ptmind.ptengine.util;
+package com.huan.util;
 
 /**
  * @author <a href="mailto:jean@eastcode.org">Jean Seurin</a>
