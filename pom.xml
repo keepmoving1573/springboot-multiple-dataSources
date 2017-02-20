@@ -76,14 +76,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-freemarker</artifactId>
         </dependency>
-
-        <!--上传文件-->
-        <dependency>
-            <groupId>commons-fileupload</groupId>
-            <artifactId>commons-fileupload</artifactId>
-            <version>1.3.1</version>
-        </dependency>
-
         <!--mysql-->
         <dependency>
             <groupId>mysql</groupId>
@@ -115,12 +107,6 @@
             <version>1.3.2</version>
             <scope>compile</scope>
             <optional>true</optional>
-        </dependency>
-        <!--分页插件-->
-        <dependency>
-            <groupId>com.github.pagehelper</groupId>
-            <artifactId>pagehelper</artifactId>
-            <version>${pagehelper.version}</version>
         </dependency>
         <!--通用Mapper-->
         <dependency>
