@@ -17,7 +17,6 @@ maven 3.3.9
 
 ### 使用的技术 ###
 
-技术
 - spring-boot
 - springmvc
 - mybatis
