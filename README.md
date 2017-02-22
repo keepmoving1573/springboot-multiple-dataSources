@@ -6,6 +6,8 @@ spring-boot多数据源自动切换例子项目， 利用spring aop 切面，自
 
 CommonServiceImpl是公共处理类，Test1ServiceImpl和Test2ServiceImpl是两个数据源分别的业务处理类。定义DataSourceAspect类处理切面。
 
+springboot-multiple-dataSources/src/main/resources目录下的database1.sql和database2.sql是2个数据源初始化脚本
+
 ### 软件环境 ###
 IntelliJ IDEA 2016.3.3(或eclipse)
 
