@@ -19,10 +19,9 @@
         <!--  XML生成路径  -->
         <targetResourcesProject>${basedir}/src/main/resources</targetResourcesProject>
         <targetXMLPackage>mapper</targetXMLPackage>
-        <mysql.version>5.1.39</mysql.version>
-        <spring.version>4.2.5.RELEASE</spring.version>
+        <mysql.version>5.1.42</mysql.version>
         <junit.version>4.12</junit.version>
-        <mapper.version>3.3.8</mapper.version>
+        <mapper.version>3.4.0</mapper.version>
         <pagehelper.version>4.1.6</pagehelper.version>
         <logback.version>1.1.7</logback.version>
     </properties>
@@ -30,7 +29,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.3.5.RELEASE</version>
+        <version>1.5.2.RELEASE</version>
     </parent>
 
     <dependencies>
@@ -94,25 +93,25 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
-            <version>1.0.11</version>
+            <version>1.0.31</version>
         </dependency>
 
         <!--Mybatis-->
         <dependency>
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis</artifactId>
-            <version>3.2.8</version>
+            <version>3.4.4</version>
         </dependency>
         <dependency>
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis-spring</artifactId>
-            <version>1.2.3</version>
+            <version>1.3.1</version>
         </dependency>
         <!-- Mybatis Generator -->
         <dependency>
             <groupId>org.mybatis.generator</groupId>
             <artifactId>mybatis-generator-core</artifactId>
-            <version>1.3.2</version>
+            <version>1.3.5</version>
             <scope>compile</scope>
             <optional>true</optional>
         </dependency>
@@ -147,7 +146,7 @@
             <plugin>
                 <groupId>org.mybatis.generator</groupId>
                 <artifactId>mybatis-generator-maven-plugin</artifactId>
-                <version>1.3.2</version>
+                <version>1.3.5</version>
                 <configuration>
                     <configurationFile>${basedir}/src/main/resources/generator/generatorConfig.xml</configurationFile>
                     <overwrite>true</overwrite>
